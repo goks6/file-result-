@@ -28,7 +28,8 @@ import RNPickerSelect from 'react-native-picker-select';
 import { LineChart, BarChart, PieChart } from 'react-native-chart-kit';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { Student, Assessment, Subject, ExamType, School, ReportCard, ClassAnalysis } from '../types';
+import { Student, Subject, ExamType, School, ReportCard, ClassAnalysis } from '../types';
+import type { Assessment } from '../types';
 import { FirebaseService } from '../services/firebase';
 import { CalculationUtils } from '../utils/calculations';
 import { PDFGenerator } from '../utils/pdfGenerator';
@@ -544,6 +545,8 @@ const AnalysisTab = ({
               }}
               width={screenWidth - 60}
               height={220}
+              yAxisLabel=""
+              yAxisSuffix="%"
               chartConfig={chartConfig}
               style={styles.chart}
             />
@@ -564,6 +567,8 @@ const AnalysisTab = ({
               }}
               width={screenWidth - 60}
               height={220}
+              yAxisLabel=""
+              yAxisSuffix="%"
               chartConfig={chartConfig}
               style={styles.chart}
             />
